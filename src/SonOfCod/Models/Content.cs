@@ -10,18 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SonOfCod.Models
 {
-    [Table("Subscribers")]
-    public class Subscriber
+    [Table("Content")]
+    public class Content
     {
         [Key]
-        public int SubscriberId { get; set; }
+        public int ContentId { get; set; }
 
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string Title { get; set; }
 
-        public string Name { get; set; }
-
-        public string Address { get; set; }
+        public string Details { get; set; }
     }
 }

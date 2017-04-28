@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Son of Cod";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,7 +16,7 @@
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Email)
-    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" }, )
 
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
@@ -34,3 +34,6 @@
 {
     <h4>@Html.ActionLink("View a list of all subscribers", "List")</h4>
 }
+
+
+@*new { @data-val-required = "The Email Address field is required." }*@

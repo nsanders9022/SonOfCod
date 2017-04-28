@@ -51,5 +51,57 @@ namespace SonOfCod
                 await context.Response.WriteAsync("Hello World!");
             });
         }
+        
+        public static void AddTestData(ApplicationDbContext contextTest)
+        {
+            var content1 = new Models.Content
+            {
+                Title = "SUSTAINABILITY",
+                Details = "Sustainability is not new to us. It has been part of our corporate culture from the beginning. We recognized early on that we needed to protect and preserve our resources to ensure the success of future generations. That is why business decisions were made to expand beyond wild-caught to include sustainable farming in aquaculture. We continuously work to strike a balance between meeting the needs of our business and the sustainable framework we've developed for our seafood resources. It is an on-going process that will be continuously improved, because we know: The future of our fisheries is the future of our business."
+            };
+
+            contextTest.Content.Add(content1);
+
+            var content2 = new Models.Content
+            {
+                Title = "COMMUNITY",
+                Details = "Our relationship with people is guided by our Social Responsibility Program. The actions we take and decisions that we make impact our team members, neighbors and consumers. We must promote and protect human rights and fair labor standards, while contributing to the economic and social health of the communities in which we live and work. We are committed to providing a safe and healthy work environment, in compliance with all laws and regulations. For years, Pacific Seafood has been a supporter of City of Hope, Make-A-Wish Foundation, SeaShare, as well as other domestic and international non-profits."
+            };
+
+            contextTest.Content.Add(content2);
+
+            var content3 = new Models.Content
+            {
+                Title = "SELF-GOVERNANCE",
+                Details = "Our Self-Governance holds us to a higher standard and is a major competitive difference. Compliance with today's business and industry standards can be challenging. However, our definition of self-governance goes well beyond industry standards, as we set our own standards for best practices. Examples of programs where we define best practices may include food safety, worker safety and product specification compliance. While we set high standards for business performance we also hold our team members accountable to operational excellence.Our company's Diamond Philosophy defines excellence as: Consistently doing your best, and always striving to do better. We feel that philosophy supports our high standards of self - governance."
+            };
+
+            contextTest.Content.Add(content3);
+
+            var image1 = new Models.Image
+            {
+                Title = "Employees hard at work",
+                URL = "http://www.mdsg.umd.edu/sites/default/files/images/crab_pickers.jpg"
+            };
+
+            contextTest.Images.Add(image1);
+
+            var image2 = new Models.Image
+            {
+                Title = "Pike Place Fish Throwing",
+                URL = "https://s-media-cache-ak0.pinimg.com/originals/31/f8/c2/31f8c2851f15a564c611a099c5fa5941.jpg"
+            };
+
+            contextTest.Images.Add(image2);
+
+            var image3 = new Models.Image
+            {
+                Title = "Our Delicious Food",
+                URL = "https://firstcastlefcu.org/wp-content/uploads/2013/05/SEAFOOD-FESTIVAL.jpg"
+            };
+
+            contextTest.Images.Add(image3);
+
+        }
     }
 }

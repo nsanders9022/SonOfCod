@@ -4,8 +4,23 @@
 }
 
 @model IEnumerable<SonOfCod.Models.Subscriber>
+<h2>Current Mailing List</h2>
 
-@foreach (var subscriber in Model)
-{
-    <li>@subscriber.Address</li>
-}
+<table>
+    <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    
+    @foreach (var subscriber in Model)
+    {
+        <tr>
+            <td>@subscriber.Email</td>
+            <td>@subscriber.Name</td>
+            <td>@subscriber.Address</td>
+        </tr>
+    }
+</table>
+
+

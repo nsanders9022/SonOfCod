@@ -10,18 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SonOfCod.Models
 {
-    [Table("Subscribers")]
-    public class Subscriber
+    [Table("Images")]
+    public class Image
     {
         [Key]
-        public int SubscriberId { get; set; }
-
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
-
-        public string Name { get; set; }
-
-        public string Address { get; set; }
+        public int ImageId { get; set; }
+        public string Title { get; set; }
+        public string URL { get; set; }
     }
 }

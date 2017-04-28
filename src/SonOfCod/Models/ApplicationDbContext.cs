@@ -14,6 +14,8 @@ namespace SonOfCod.Models
         }
 
         public DbSet<Subscriber> Subscribers { get; set; }
+        public DbSet<Content> Content { get; set; }
+        public DbSet<Image> Images { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SonOfCod;integrated security=True");
