@@ -31,8 +31,10 @@ button a {
 }
 
 .image-marketing {
-    width: 100%;
-    border: pink;
+    width: 75%;
+    border: 1px solid black;
+    margin: 30px;
+
 }
 .navbar {
     background-color: lightblue;

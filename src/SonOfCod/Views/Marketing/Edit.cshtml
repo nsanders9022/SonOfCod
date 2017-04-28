@@ -12,14 +12,14 @@
     @Html.HiddenFor(model => model.ContentId)
 
     @Html.LabelFor(model => model.Title)
-    @Html.EditorFor(model => model.Title)
+    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
 
     @Html.LabelFor(model => model.Details)
-    @Html.EditorFor(model => model.Details)
+    @Html.EditorFor(model => model.Details, new { htmlAttributes = new { @class = "form-control" } })
 
     @Html.LabelFor(model => model.Url)
-    @Html.EditorFor(model => model.Url)
+    @Html.EditorFor(model => model.Url, new { htmlAttributes = new { @class = "form-control" } })
 
-    <input type="submit" value="Save" />
+    <input type="submit" value="Save" class="btn btn-primary" />
 }
 <p>@Html.ActionLink("Back to marketing page", "Index")</p>
