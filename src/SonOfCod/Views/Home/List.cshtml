@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Son of Cod";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<SonOfCod.Models.Subscriber>
+
+@foreach (var subscriber in Model)
+{
+    <li>@subscriber.Address</li>
+}

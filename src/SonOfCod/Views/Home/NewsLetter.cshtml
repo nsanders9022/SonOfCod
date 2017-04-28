@@ -4,9 +4,8 @@
 }
 
 @using System.Security.Claims
-@using SonOfCod.ViewModels
 
-@model SubscriberViewModel
+@model SonOfCod.Models.Subscriber
 
 <h1>News Letter</h1>
 <hr />
@@ -14,27 +13,24 @@
 <p>Our news letter provides you with great information regarding new events that will happen soon, fun facts about seafood, and recipe ideas.</p>
 <p>Sign up to join the mailing list</p>
 
-@using (Html.BeginForm("NewsLetter", "Home", FormMethod.Post))
+@using (Html.BeginForm())
 {
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email)
+    @Html.LabelFor(model => model.Email)
+    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
 
-    @Html.LabelFor(m => m.Name)
-    @Html.PasswordFor(m => m.Name)
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
 
-    <input type="submit" value="Subscribe" />
+    @Html.LabelFor(model => model.Address)
+    @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+
+
+
+    <br />
+    <input type="submit" class="btn btn-success" value="Subscribe" />
 }
 
-
-
-
-
-@*@if (User.Identity.IsAuthenticated)
+@if (User.Identity.IsAuthenticated)
 {
-    
+    <h4>@Html.ActionLink("View a list of all subscribers", "List")</h4>
 }
-else
-{
-    <p>@Html.ActionLink("Register", "Register", "Account")</p>
-    <p>@Html.ActionLink("Log in", "Login", "Account")</p>
-}*@
