@@ -8,7 +8,32 @@
 
 <h2>Marketing</h2>
 
-@foreach (var item in Model)
-{
-    <img src="@item.Url" />
-}
+<div class="row container">
+    <div class="col-sm-6">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+                <h3>@item.Title</h3>
+                <p>@item.Details</p>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <button class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = item.ContentId })</button>
+                }    
+
+            }
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <img class="image-marketing" src="@item.Url" />
+            }
+        </div>
+    </div>
+</div>
+
+
+

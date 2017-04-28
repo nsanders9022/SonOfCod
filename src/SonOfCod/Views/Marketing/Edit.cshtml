@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Son of Cod";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SonOfCod.Models.Content
+
+<h1>Edit Content</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ContentId)
+
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+
+    @Html.LabelFor(model => model.Details)
+    @Html.EditorFor(model => model.Details)
+
+    @Html.LabelFor(model => model.Url)
+    @Html.EditorFor(model => model.Url)
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to marketing page", "Index")</p>

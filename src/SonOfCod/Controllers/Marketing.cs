@@ -21,5 +21,19 @@ namespace SonOfCod.Controllers
         {
             return View(db.Content.ToList());
         }
+
+        public IActionResult Edit(int id)
+        {
+            var thisContent = db.Content.FirstOrDefault(content => content.ContentId == id);
+            return View(thisContent);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Content content)
+        {
+            db.Entry(content).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
