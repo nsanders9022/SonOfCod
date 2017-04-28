@@ -1,11 +1,12 @@
 ﻿.header {
-    background-image: url("http://www.discoverboating.com/shared-site/static/images/activity-gallery/activity-gallery-21.jpg");
+    background-image: url("http://blogs.r.ftdata.co.uk/photo-diary/files/2013/05/fisherman.jpg");
     width: 100%;
     height: 400px;
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid gray;
     margin-top: -20px;
+    background-position: bottom;
 
 }
 
@@ -18,7 +19,7 @@
 }
 
 a {
-    color: black;
+    color: dimgray;
 }
 
 button a {
@@ -28,6 +29,7 @@ button a {
 .products {
     background-color: lightgray;
     padding: 3% 20%;
+
 }
 
 .image-marketing {
@@ -37,7 +39,11 @@ button a {
 
 }
 .navbar {
-    background-color: lightblue;
+    background-color: lightsalmon;
+}
+.navbar input {
+    float: right;
+    margin-top: -30px;
 }
 
 .content-body {

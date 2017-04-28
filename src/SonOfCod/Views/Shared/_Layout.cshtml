@@ -9,22 +9,25 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="col-sm-3"><h3>@Html.ActionLink("Son of Cod","Index", "Home")</h3></div>
-        <div>
-            <h4>@Html.ActionLink("Marketing Information", "Index", "Marketing") | @Html.ActionLink("News Letter", "NewsLetter", "Home") | @User.Identity.Name</h4>
-            @if (User.Identity.IsAuthenticated)
-            {
-                <h4>@Html.ActionLink("Register new admin", "Register", "Account")</h4>
-                @using (Html.BeginForm("LogOff", "Account"))
+        <div class="col-sm-3"><h3>@Html.ActionLink("Son of Cod", "Index", "Home")</h3></div>
+        <div class="col-sm-9">
+            <div class="col-sm-6">
+                <h4>@Html.ActionLink("Marketing Information", "Index", "Marketing") | @Html.ActionLink("Newletter", "NewsLetter", "Home") </h4>
+            </div>
+            <div class="col-sm-6">
+                @if (User.Identity.IsAuthenticated)
                 {
-                    <input type="submit" class="btn btn-warning" value="Log out" />
+                    <h4>@Html.ActionLink("Register new admin", "Register", "Account")</h4>
+                    @using (Html.BeginForm("LogOff", "Account"))
+                    {
+                        <input type="submit" class="btn btn-warning" value="Log out" />
+                    }
                 }
-            }
-            else
-            {
-                <h4>@Html.ActionLink("Register/Log in", "Index", "Account")</h4>
-            }
-
+                else
+                {
+                    <h4>@Html.ActionLink("Register/Log in", "Index", "Account")</h4>
+                }
+            </div>
         </div>
     </div>
     <div class="header">
