@@ -32,3 +32,6 @@ button a {
     width: 100%;
     border: pink;
 }
+.navbar {
+    background-color: blue;
+}

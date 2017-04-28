@@ -9,23 +9,19 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="col-sm-6"><h3>@Html.ActionLink("Son of Cod","Index", "Home")</h3></div>
-        <div class="pull-right">
-            @using (Html.BeginForm("LogOff", "Account"))
-            {
-                <input type="submit" class="btn btn-warning" value="Log out" />
-            }
-        </div>
-        <div class="pull-right">
-            <h3>@Html.ActionLink("Marketing Information", "Index", "Marketing") | @Html.ActionLink("News Letter", "NewsLetter", "Home") | @User.Identity.Name</h3>
+        <div class="col-sm-3"><h3>@Html.ActionLink("Son of Cod","Index", "Home")</h3></div>
+        <div>
+            <h4>@Html.ActionLink("Marketing Information", "Index", "Marketing") | @Html.ActionLink("News Letter", "NewsLetter", "Home") | @User.Identity.Name</h4>
             @if (User.Identity.IsAuthenticated)
             {
-
+                @using (Html.BeginForm("LogOff", "Account"))
+                {
+                    <input type="submit" class="btn btn-warning" value="Log out" />
+                }
             }
             else
             {
-                <h3>@Html.ActionLink("Register/Log in", "Index", "Account")</h3>
-
+                <h4>@Html.ActionLink("Register/Log in", "Index", "Account")</h4>
             }
 
         </div>
