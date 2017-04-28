@@ -38,6 +38,9 @@ namespace SonOfCod
 
         public void Configure(IApplicationBuilder app)
         {
+            var context = app.ApplicationServices.GetService<ApplicationDbContext>();
+            AddTestData(context);
+
             app.UseStaticFiles();
             app.UseIdentity();
             app.UseMvc(routes =>
@@ -46,13 +49,13 @@ namespace SonOfCod
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-            app.Run(async (context) =>
+            app.Run(async (context1) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context1.Response.WriteAsync("Hello World!");
             });
         }
         
-        public static void AddTestData(ApplicationDbContext contextTest)
+        public static void AddTestData(ApplicationDbContext context)
         {
             var content1 = new Models.Content
             {
@@ -61,7 +64,7 @@ namespace SonOfCod
                 Url = "https://firstcastlefcu.org/wp-content/uploads/2013/05/SEAFOOD-FESTIVAL.jpg"
             };
 
-            contextTest.Content.Add(content1);
+            context.Content.Add(content1);
 
             var content2 = new Models.Content
             {
@@ -70,7 +73,7 @@ namespace SonOfCod
                 Url = "https://s-media-cache-ak0.pinimg.com/originals/31/f8/c2/31f8c2851f15a564c611a099c5fa5941.jpg"
             };
 
-            contextTest.Content.Add(content2);
+            context.Content.Add(content2);
 
             var content3 = new Models.Content
             {
@@ -79,7 +82,9 @@ namespace SonOfCod
                 Url = "http://www.mdsg.umd.edu/sites/default/files/images/crab_pickers.jpg"
             };
 
-            contextTest.Content.Add(content3);
+            context.Content.Add(content3);
+
+            context.SaveChanges();
         }
     }
 }
