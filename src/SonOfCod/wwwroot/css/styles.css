@@ -28,8 +28,7 @@ button a {
 
 .products {
     background-color: lightgray;
-    padding: 3% 20%;
-
+    padding: 3% 5%;
 }
 
 .image-marketing {
@@ -39,7 +38,7 @@ button a {
 
 }
 .navbar {
-    background-color: lightsalmon;
+    background-color: peru;
 }
 .navbar input {
     float: right;
@@ -65,4 +64,15 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+.text {
+    color: white;
+    float: right;
+    width: 25%;
+    margin-top: 3%;
+    margin-right: 40%;
+    padding: 20px;
+    background:rgba(255,255,255, 0.3);
+    
 }

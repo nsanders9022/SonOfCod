@@ -9,8 +9,8 @@
 
 <h2>Newsletter</h2>
 <hr />
-<p>Our news letter provides you with great information regarding new events that will happen soon, fun facts about seafood, and recipe ideas.</p>
-<p>Sign up to join the mailing list</p>
+<p>Our newsletter provides you with great information regarding events, fun facts about seafood, and recipe ideas.</p>
+<h3>Sign up to join the mailing list</h3>
 
 @using (Html.BeginForm())
 {
@@ -26,13 +26,10 @@
 
 
     <br />
-    <input type="submit" class="btn btn-success" value="Subscribe" />
+    <input type="submit" class="btn btn-primary" value="Subscribe" />
 }
 
 @if (User.Identity.IsAuthenticated)
 {
     <h4>@Html.ActionLink("View a list of all subscribers", "List")</h4>
 }
-
-
-@*new { @data-val-required = "The Email Address field is required." }*@
