@@ -12,5 +12,24 @@ namespace SonOfCod.Controllers
         {
             return View();
         }
+        public IActionResult NewsLetter()
+        {
+            return View();
+        }
+
+        //[HttpPost]
+        //public async Task<IActionResult> Subscribe(SubscriberViewModel model)
+        //{
+        //    var subscriber = new ApplicationUser { UserName = model.Email };
+        //    IdentityResult result = await _userManager.CreateAsync(user, model.Password);
+        //    if (result.Succeeded)
+        //    {
+        //        return RedirectToAction("Index");
+        //    }
+        //    else
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }

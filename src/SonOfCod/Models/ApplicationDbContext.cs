@@ -13,7 +13,7 @@ namespace SonOfCod.Models
         {
         }
 
-        //Tables go here
+        public DbSet<Subscriber> Subscribers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SonOfCod;integrated security=True");

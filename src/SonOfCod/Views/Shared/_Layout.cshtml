@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="col-sm-6">Son Of Cod</div>
+        <div class="col-sm-6"><h3>@Html.ActionLink("Son of Cod","Index", "Home")</h3></div>
         <div class="pull-right">
             @using (Html.BeginForm("LogOff", "Account"))
             {
@@ -18,7 +18,7 @@
         </div>
         <div class="pull-right">
             @*<h3>@User.Identity.Name</h3>*@
-            <h3>@Html.ActionLink("News Letter", "Index", "NewsLetter") | @User.Identity.Name</h3>
+            <h3>@Html.ActionLink("News Letter", "NewsLetter", "Home") | @User.Identity.Name</h3>
         </div>
     </div>
     <div>

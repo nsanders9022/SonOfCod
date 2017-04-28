@@ -6,3 +6,22 @@
     background-size: cover;
 
 }
+
+.text-header {
+    text-align:center;
+    width: 60%;
+    margin-left: 20%;
+}
+
+a {
+    color: black;
+}
+
+button a {
+    color: white;
+}
+
+.products {
+    background-color: lightgray;
+    padding: 10px;
+}

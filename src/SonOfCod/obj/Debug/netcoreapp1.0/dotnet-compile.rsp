@@ -211,5 +211,7 @@ C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\20170428152124_Initia
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Models\ApplicationDbContext.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Models\ApplicationUser.cs
+C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\Models\Subscriber.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\ViewModels\LoginViewModel.cs
 C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\ViewModels\REgisterViewModel.cs
+C:\Users\epicodus\Desktop\SonOfCod\src\SonOfCod\ViewModels\SubscriberViewModel.cs
