@@ -4,5 +4,17 @@
 }
 
 @using System.Security.Claims
+@using SonOfCod.Models
 
 <h2>Marketing</h2>
+
+@foreach (var image in Model.Images)
+{
+    <img src="@image.URL" />
+}
+
+@foreach (var content in Model.Content)
+{
+    <h3>@content.Title</h3>
+    <p>@content.Details</p>
+}

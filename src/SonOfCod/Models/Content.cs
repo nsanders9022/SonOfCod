@@ -19,5 +19,6 @@ namespace SonOfCod.Models
         public string Title { get; set; }
 
         public string Details { get; set; }
+        public string Url { get; set; }
     }
 }

@@ -6,14 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using SonOfCod.ViewModels;
 using SonOfCod.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+
 
 namespace SonOfCod.Controllers
 {
     public class Marketing : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public IActionResult Index()
         {
-            return View();
+            return View(db.Content.ToList());
         }
     }
 }
