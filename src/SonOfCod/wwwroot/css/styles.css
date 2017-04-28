@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid gray;
+    margin-top: -20px;
 
 }
 
@@ -12,7 +13,8 @@
     text-align:center;
     width: 70%;
     margin-left: 15%;
-    padding: 20px 0px;
+    padding: 0px 0px 20px 0px;
+    background-color: white;
 }
 
 a {
@@ -33,5 +35,26 @@ button a {
     border: pink;
 }
 .navbar {
-    background-color: blue;
+    background-color: lightblue;
+}
+
+.content-body {
+    padding-top: 30px;
+    
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }

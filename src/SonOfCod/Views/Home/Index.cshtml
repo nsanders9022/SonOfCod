@@ -5,10 +5,7 @@
 
 @using System.Security.Claims
 
-<h1>Son Of Cod</h1>
-<hr />
-<div class="header">
-</div>
+
 
 <div class="text-header">
     <h2>A Leader in Seafood</h2>
@@ -23,19 +20,13 @@
             <h4>Explore our selection of high-quality seafood from around the world</h4>
             <p>When it comes to superior seafood, sales and customer service, Pacific Seafood is the best choice.</p>
             <p>Our diverse fresh or frozen selection of species will appeal to restaurateurs, the foodservice sector or retail channels. Click below to explore our complete inventory now.</p>
+            <button class="btn btn-info">@Html.ActionLink("Marketing", "Index", "Marketing")</button>
         </div>
         <div class="col-sm-6">
             <img src="https://www.pacseafood.com/images/librariesprovider3/default-album/product-line.jpg?sfvrsn=0"
         </div>
+        
     </div>
     
+    
 </div>
-
-@if (User.Identity.IsAuthenticated)
-{
-}
-else
-{
-    <p>@Html.ActionLink("Register", "Register", "Account")</p>
-    <p>@Html.ActionLink("Log in", "Login", "Account")</p>
-}
