@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using BasicAuthentication.ViewModels
+@using SonOfCod.ViewModels
 
 @model RegisterViewModel
 
@@ -19,6 +19,8 @@
 
     @Html.LabelFor(m => m.ConfirmPassword)
     @Html.PasswordFor(m => m.ConfirmPassword)
+
+    <p>Password must contain at least one number, upper and lower case letters, and a special character. Passwords must be at least 6 characters long.</p>
 
     <input type="submit" value="Register" />
 }

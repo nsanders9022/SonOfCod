@@ -1,17 +1,14 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
-using SonOfCod.Models;
-using System.Threading.Tasks;
 using SonOfCod.ViewModels;
+using SonOfCod.Models;
+using Microsoft.AspNetCore.Identity;
 
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
-namespace SonOfCod.Controllers
+namespace SonOfCOd.Controllers
 {
     public class AccountController : Controller
     {
@@ -30,7 +27,6 @@ namespace SonOfCod.Controllers
         {
             return View();
         }
-
         public IActionResult Register()
         {
             return View();
@@ -49,6 +45,32 @@ namespace SonOfCod.Controllers
             {
                 return View();
             }
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> LogOff()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
         }
     }
 }
